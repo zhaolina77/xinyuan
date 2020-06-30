@@ -1,0 +1,33 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.flex{display: flex;justify-content: space-between;}
+.pingfen .pf {
+  justify-content: flex-start;
+}
+textarea {
+  height: 300rpx;
+}
+.aui-col-xs-4{ width: 32%;
+  height: 220rpx;
+  position: relative;
+  overflow: hidden;
+margin-right: 2%;
+}
+.aui-col-xs-4:nth-of-type(3n){margin-right: 0 !important;}
+.aui-col-xs-4 image{
+  width:100%;
+  height: 100%;
+}
+.close {
+  width: 36rpx !important;
+  height: 36rpx !important;
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+}
+.pic {
+  border-radius:6rpx;
+}
+
+

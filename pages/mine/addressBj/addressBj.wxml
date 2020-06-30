@@ -1,0 +1,54 @@
+<view class="aui-content">
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="aui-padded-t-15">
+			<view class="aui-font-size-26  aui-padded-b-5 aui-text-grayer">姓名：</view>
+			<view class="aui-border-b">
+				<input placeholder="请输入姓名" value="{{name}}" type="text" placeholder-class="phcolor" bindinput="user" placeholder-style="color: #999; font-size: 28rpx;" />
+			</view>
+		</view>
+		<view class="aui-padded-t-15">
+			<view class="aui-font-size-26  aui-padded-b-5  aui-text-grayer">手机号码：</view>
+			<view class="aui-border-b">
+				<input placeholder="请输入手机号" value="{{mobile}}" type="number" placeholder-class="phcolor" bindinput="phone" placeholder-style="color: #999; font-size: 28rpx;" />
+			</view>
+		</view>
+		<view class="aui-padded-t-15">
+			<view class="aui-font-size-26  aui-padded-b-5  aui-text-grayer">所在地区：</view>
+			<view class="aui-border-b aui-font-size-14 aui-text-grayer aui-padded-t-10 aui-padded-b-10 flex" style="justify-content: space-between;">
+				<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class="pick">
+					<view class="picker">
+						<text wx:if="{{region.length>0}}" style="color:#333">{{region}}</text>
+          	<text wx:else style="color:#999">请选择</text>
+
+					</view>
+				</picker>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="">
+			<view class="aui-font-size-26  aui-padded-b-5 aui-padded-t-10  aui-text-grayer">详细地址：</view>
+			<view class="aui-border-b">
+				<input placeholder="请输入收货详细地址" value="{{addressInfo}}" type="text" placeholder-class="phcolor" bindinput="address" placeholder-style="color: #999; font-size: 28rpx;" />
+			</view>
+		</view>
+		<view class="aui-list aui-list-in aui-padded-t-15">
+			<view class="aui-list-item aui-padded-l-0">
+				<view class="aui-list-item-inner aui-padded-r-0">
+					<view class="aui-list-item-title fweight-5 aui-font-size-28 aui-text-grayer">
+						设为首选收货地址
+					</view>
+					<view class="aui-list-item-right">
+						<switch bindchange="switch1Change" checked="{{isDefault==0?true:false}}" color="#ff321b" />
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="btn_box aui-bg-white aui-padded-15" bindtap="baocun">
+	<view class="btn">保存</view>
+</view>
+
+

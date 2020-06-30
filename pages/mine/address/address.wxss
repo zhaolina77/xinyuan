@@ -1,0 +1,40 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+.add{width: 300rpx;height: 88rpx;line-height: 88rpx;margin: 0 auto;}
+
+
+scroll-view{
+  white-space:normal;
+}
+.order-item {
+position: relative;
+}
+.remove{  
+width: 160rpx;  
+height: 100%;  
+background-color: #FF3333; 
+color: white; 
+position: absolute;  
+top: 0;  
+right: -160rpx;  
+display: flex;  
+justify-content: center;  
+align-items: center;  
+} 
+.aui-list-item-title{
+  display: flex;
+  display: -webkit-flex;
+}
+.dizhi{
+  width: 100%;
+  line-height: 22px;
+}
+.aui-label-outlined:after { 
+  border-radius: 8px;
+  left: 0 !important;
+}
+.flex{display: flex;justify-content: flex-start;align-items: flex-start;}
+.moren{width:10%;padding:0 5rpx;border-radius:8%; border: 1rpx solid #ff321b;color: #ff321b;}
+
+.xinzeng{width: 100%;height: 88rpx;line-height: 88rpx;}

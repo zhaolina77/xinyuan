@@ -1,0 +1,39 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+/* #tab{position: absolute;top: 0;z-index: 99;} */
+scroll-view{
+    background-color: #fff !important;
+    white-space:nowrap;
+    width:100%;
+    display: flex;  
+    height:90rpx;
+    line-height: 60rpx;
+    position: fixed;top: 0;z-index: 99;
+}
+scroll-view .swiper-slide{
+    margin-left:30rpx;
+    margin-right:30rpx ;
+}
+scroll-view .swiper-slide:last-child{
+    margin-right:120rpx;
+}
+scroll-view .swiper-slide .txt{color: #999;}
+scroll-view .on .txt{color: #222 !important;font-weight: 500;}
+scroll-view .on .line{width: 22rpx;height: 6rpx;background-color: #ff321b;margin: 0 auto;border-radius: 3rpx;}
+
+
+.flex{display: flex;justify-content:space-between;align-items: center;}
+.jt_right image{width: 26rpx;height: 26rpx;}
+.item{justify-content: flex-start;width:450rpx;overflow: hidden;height: 150rpx;}
+.pic{width: 122rpx;height: 122rpx;overflow: hidden;margin-right: 16rpx;position: relative;float: left;margin-bottom: 30rpx;}
+.shang{width: 100%;height: 30rpx;background-color: #000000;position: absolute;bottom: 0;left: 0;}
+.pic image{width: 100%;height: 100%;}
+.heji{justify-content: flex-end;}
+.qx{border: 1rpx solid #eee;width: 150rpx;height: 60rpx;line-height: 60rpx;border-radius: 5rpx;}
+
+
+/* 无数据 */
+.nodata1{width:80%;height:600rpx;margin:200rpx auto;}
+.nodata1 image{width: 100%;height: 100%;}

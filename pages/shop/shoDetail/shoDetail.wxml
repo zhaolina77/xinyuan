@@ -1,0 +1,99 @@
+<import src="../../../wxParse/wxParse.wxml" />
+
+<view class="big_box">
+	<view class="">
+		<view class="banner detail_pic">
+			<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#E8E8E8" indicator-active-color="#FF321A ">
+				<swiper-item wx:for="{{goodsDetails.pictures}}" wx:key="pic">
+					<image src="{{item}}" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+		<view class="aui-padded-15">
+			<view class="aui-font-size-17">{{goodsDetails.name}}</view>
+			<view class="flex aui-margin-t-10">
+				<view class="flex">
+					<view class="aui-font-size-19 aui-text-theme">￥{{goodsDetails.market_price}}元</view>
+					<view class="aui-font-size-12 aui-text-grayer aui-padded-l-15">建议零售价：{{goodsDetails.suggest_price}}元/{{goodsDetails.unit}}</view>
+				</view>
+				<view class="aui-font-size-11 aui-text-grayer">销量：{{goodsDetails.sales}}</view>
+			</view>
+		</view>
+	</view>
+	<view class="aui-border-bgT aui-padded-l-15 gui_box">
+		<view class="aui-media-list-item-inner  aui-padded-t-5 aui-padded-b-5 aui-border-b"  wx:if="{{goodsDetails.spec!=''}}">
+			<view class="aui-list-item-inner">
+				<view class="aui-list-item-text">
+					<view>
+						<text class="aui-margin-r-10 aui-font-size-14">规格</text>
+						<text class="aui-text-blacker aui-font-size-14">{{goodsDetails.spec}}</text>
+					</view>
+				
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="aui-padded-15 aui-padded-b-0 aui-border-bgT">
+		<view class="">
+			<view class="flex shangmao   " style="align-items:flex-start">
+				<view class="head">
+					<image src="{{supplier.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="rig aui-padded-l-10  aui-padded-b-15">
+					<view class=" flex">
+						<view class="">
+							<view class="aui-font-size-15">{{supplier.name}}</view>
+							<view class="aui-text-blue aui-font-size-12 aui-margin-t-5">{{supplier.label}}</view>
+						</view>
+
+					</view>
+				</view>
+			</view>
+			<view class=" shangmao   aui-text-grayer aui-font-size-12 ">
+				{{supplier.content}}
+			</view>
+			<view class=" ">
+				<view class="flex dizhi aui-padded-t-15 aui-padded-b-15" bindtap="address">
+					<view class="icon1">
+						<image src="/image/address.png"></image>
+					</view>
+					<view class="aui-font-size-14 aui-padded-l-15">{{supplier.address}}</view>
+				</view>
+				<view class="flex dizhi  aui-padded-b-15">
+					<view class="icon1">
+						<image src="/image/phone_on.png"></image>
+					</view>
+					<view class="aui-font-size-14 aui-padded-l-15">{{supplier.phone}}</view>
+					<view class="aui-btn aui-btn-theme aui-margin-l-15 dianhua" bindtap="call" data-phone="{{supplier.phone}}">拨打电话</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="aui-border-bgT aui-padded-15">
+		<view class="">商品详情</view>
+		<view class="aui-padded-t-15">
+			<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+		</view>
+
+		<!-- 商品条形码 -->
+		<view class="">商品条形码</view>
+		<view class="aui-padded-t-15">
+			<template is="wxParse" data="{{wxParseData:article1.nodes}}" />
+		</view>
+
+	</view>
+</view>
+<view class="footer aui-border-t flex">
+	<view class="cart aui-border-r" bindtap="cart">
+		<view class="dot aui-text-white aui-font-size-12" wx:if="{{cartCount>0}}">{{cartCount}}</view>
+		<image src="/image/cart-on.png"></image>
+	</view>
+	<view class="caigou aui-text-center" bindtap="addCart">
+		加入采购单
+	</view>
+	<view class="caigou aui-text-center aui-bg-theme aui-text-white" bindtap="tjOrder">
+		提交订单
+	</view>
+</view>

@@ -1,0 +1,36 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+.flex{display: flex;justify-content: space-between;align-items: center;}
+.aui-bar image{
+    width: 32rpx;
+    vertical-align:middle;
+}
+.aui-title{
+    right:30rpx !important;
+    display: flex;
+    align-items: center;
+    left:30rpx !important;
+}
+.aui-bar{
+    height:100rpx;
+}
+.serch{
+    border-radius: 10rpx;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+.serch input{
+    float: left;
+    line-height:70rpx !important;
+    height: 70rpx;
+    width: 80%;
+    color: #222;
+    font-size: 14px;
+}
+.aui-list image{
+    width:25rpx;
+}
+.aui-list .aui-list-item{
+    line-height:100rpx !important;
+}

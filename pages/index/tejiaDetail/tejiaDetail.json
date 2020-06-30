@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-tabbar": "/miniprogram_npm/weui-miniprogram/tabbar/tabbar"
+  },
+  "navigationBarTitleText": "供应商采购",
+  "enablePullDownRefresh": true
+  
+}

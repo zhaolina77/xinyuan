@@ -1,0 +1,23 @@
+<view class="aui-content " style="margin-bottom:140rpx">
+
+	<view class="aui-margin-t-10s bg-radius aui-bg-white aui-padded-15 tupian">
+		<textarea class="aui-font-size-15" bindinput="content" placeholder="请输入您反馈的内容，我们将不断改进"></textarea>
+		<view class="aui-row aui-padded-b-15 aui-border-b  aui-row">
+			<view class="pic   aui-margin-t-15 aui-col-xs-4 bg-radius" wx:for="{{img}}" wx:key="img">
+				<image src="{{item}}" mode="aspectFill"></image>
+				<image src="/image/close1.png" class="close" bindtap="del" data-index="{{index}}"></image>
+			</view>
+			<view class="add   aui-margin-t-15 aui-col-xs-4" bindtap="changeAvatar" wx:if="{{img.length<3}}">
+				<image src="/image/add-pic1.png"></image>
+			</view>
+		</view>
+
+	</view>
+
+
+</view>
+
+
+<view class="btn_box aui-bg-white aui-padded-15" bindtap="tijiao">
+	<view class="btn">提交</view>
+</view>

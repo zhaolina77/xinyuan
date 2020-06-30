@@ -1,0 +1,55 @@
+<view class="aui-content">
+	
+
+	<!-- 有地址 -->
+	<view class="mine-content-footer" wx:if="{{addressList.length>0}}">
+		<scroll-view scroll-y="{{isScroll}}">
+			<view class="aui-list">
+				<block wx:key="item" wx:for="{{addressList}}">
+					<view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+						<view class="aui-list-item aui-padded-l-15 aui-padded-t-15 aui-padded-b-15 aui-border-b" bindtap="bianji" data-id="{{item.id}}" data-full="{{item.full_address}}" data-info="{{item.address_info}}"  data-mobile="{{item.mobile}}" data-def="{{item.is_default}}" data-name="{{item.name}}">
+							<view class="aui-list-item-inner aui-padded-r-0">
+								<view class="aui-list-item-title " style="width:100%">
+									<view class="" style="width:100%">
+										<view class="aui-list-item-text aui-font-size-17 fw_5">
+											<view class="">
+												<text class="aui-text-blacker fweight-5">{{item.name}}</text>
+                                                <text class="aui-font-size-14 aui-padded-l-10">{{item.mobile}}</text>
+											</view>
+										</view>
+										<view class="aui-list-item-text aui-text-black aui-font-size-28 aui-margin-t-10">
+											<view class="dizhi aui-font-size-14 aui-text-grayer flex">
+												<view class="aui-font-size-12 moren aui-text-center aui-margin-r-10" wx:if="{{item.is_default==0}}">默认</view>
+												<view class="">{{item.full_address}}{{item.address_info}}</view>
+
+
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="remove" bindtap="del" data-id="{{item.id}}">删除 </view>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+
+
+		<view class="aui-padded-15 aui-margin-t-15">
+			<view class="aui-padded-15">
+				<view class="aui-btn aui-btn-outlined aui-font-size-15 xinzeng" bindtap="add">新增地址</view>
+			</view>
+		</view>
+
+	</view>
+    <!-- 无地址 -->
+	<view class="aui-padded-15 " style="margin-top:350rpx" wx:else>
+		<view class="aui-font-size-17 aui-text-center">您还没有添加过收货地址</view>
+		<view class="aui-text-center" style="margin-top:60rpx">
+			<view class="aui-btn  aui-btn-outlined add" bindtap="add">立即添加</view>
+		</view>
+	</view>
+
+
+</view>

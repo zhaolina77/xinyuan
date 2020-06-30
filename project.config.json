@@ -1,0 +1,614 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wxddbc8102b3c2821d",
+	"projectname": "xinyuan",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/login/register/register",
+					"pathName": "pages/login/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/information/information",
+					"pathName": "pages/login/information/information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/index/index",
+					"pathName": "pages/login/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejia/tejia",
+					"pathName": "pages/index/tejia/tejia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejiaDetail/tejiaDetail",
+					"pathName": "pages/index/tejiaDetail/tejiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shoDetail/shoDetail",
+					"pathName": "pages/shop/shoDetail/shoDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejia/tejia",
+					"pathName": "pages/index/tejia/tejia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejiaDetail/tejiaDetail",
+					"pathName": "pages/index/tejiaDetail/tejiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/fenleiDetail/fenleiDetail",
+					"pathName": "pages/shop/fenleiDetail/fenleiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/shoDetail/shoDetail",
+					"pathName": "pages/shop/shoDetail/shoDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejiaDetail/tejiaDetail",
+					"pathName": "pages/index/tejiaDetail/tejiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/index/index",
+					"pathName": "pages/login/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderQr/orderQr",
+					"pathName": "pages/shop/orderQr/orderQr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/address/address",
+					"pathName": "pages/mine/address/address",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/addressAdd/addressAdd",
+					"pathName": "pages/mine/addressAdd/addressAdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/account/account",
+					"pathName": "pages/mine/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/chgList/chgList",
+					"pathName": "pages/shop/chgList/chgList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/chgList/chgList",
+					"pathName": "pages/shop/chgList/chgList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderQr/orderQr",
+					"pathName": "pages/shop/orderQr/orderQr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejiaDetail/tejiaDetail",
+					"pathName": "pages/index/tejiaDetail/tejiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/fenleiDetail/fenleiDetail",
+					"pathName": "pages/shop/fenleiDetail/fenleiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/tejia/tejia",
+					"pathName": "pages/index/tejia/tejia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/orderQr/orderQr",
+					"pathName": "pages/shop/orderQr/orderQr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/xieyi/xieyi",
+					"pathName": "pages/mine/xieyi/xieyi",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/ziliao/ziliao",
+					"pathName": "pages/mine/ziliao/ziliao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/index/index",
+					"pathName": "pages/mine/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/ziliao/ziliao",
+					"pathName": "pages/mine/ziliao/ziliao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/account/account",
+					"pathName": "pages/mine/account/account",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/chgList/chgList",
+					"pathName": "pages/shop/chgList/chgList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/chgList/chgList",
+					"pathName": "pages/shop/chgList/chgList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/yijian/yijian",
+					"pathName": "pages/mine/yijian/yijian",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/fenleiDetail/fenleiDetail",
+					"pathName": "pages/shop/fenleiDetail/fenleiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/fenleiDetail/fenleiDetail",
+					"pathName": "pages/shop/fenleiDetail/fenleiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/fenleiDetail/fenleiDetail",
+					"pathName": "pages/shop/fenleiDetail/fenleiDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index/index",
+					"pathName": "pages/index/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/search/searchJl/searchJl",
+					"pathName": "pages/search/searchJl/searchJl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/cart/cart",
+					"pathName": "pages/shop/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/index/index",
+					"pathName": "pages/shop/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/index/index",
+					"pathName": "pages/order/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shop/tijiaoCg/tijiaoCg",
+					"pathName": "pages/shop/tijiaoCg/tijiaoCg",
+					"scene": null
+				}
+			]
+		}
+	}
+}

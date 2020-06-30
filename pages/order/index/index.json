@@ -1,0 +1,5 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "采购订单",
+  "enablePullDownRefresh": true
+}

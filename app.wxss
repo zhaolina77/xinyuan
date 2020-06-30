@@ -1,0 +1,20 @@
+/**app.wxss**/
+@import '/miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */
+.weui-tabbar{background-color: #fff !important;height: 106rpx !important;}
+.weui-tabbar__label{color: #999 !important;}
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon,.weui-tabbar__item.weui-bar__item_on .weui-tabbar__icon>i,.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label{color: #ff4805 !important;} 
+
+.weui-tabbar__icon{width: 50rpx !important;height:50rpx !important;}
+.weui-tabbar:before{border-top: none !important;}
+.weui-tabbar .weui-tabbar__icon .mp-badge{left: 36rpx !important;}
+.weui-badge{border-radius: 50% !important;}
+/* .weui-badge{width: 36rpx !important; height:36rpx !important;text-align: center;line-height:36rpx !important;padding: 0 !important;} */

@@ -1,0 +1,35 @@
+<view class="flex aui-padded-r-15">
+	<view style="width:96%" >
+		<view class="aui-bar aui-bar-nav aui-bar-light aui-bg-white mine-bar ">
+			<view class="aui-title">
+				<view class="aui-padded-l-15 aui-padded-r-15  serch aui-text-left">
+					<image mode="widthFix" src="/image/sousuo.png" style=" float: left;width:24rpx;margin-top:24rpx;margin-right: 6px;"></image>
+					<input placeholder="搜索商品" type="text" bindinput="verification" focus="true" confirm-type="search" bindconfirm='search' value="{{val}}" auto-focus></input>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="sousuo" bindtap="search1" >
+		<image src="/image/search.png"></image>
+	</view>
+</view>
+
+<view class="aui-content mine-content" style="height:100%" wx:if="{{is_search==1}}">
+	<view class="aui-content aui-padded-l-15 aui-padded-r-15">
+		<view class="aui-list aui-margin-t-15">
+			<view class="aui-list-item aui-list-item-middle aui-padded-l-0">
+				<view class="aui-list-item-inner aui-border-b aui-padded-r-0">
+					<text class="aui-font-size-13 fweight-5 aui-text-gray">最近搜索记录</text>
+					<image src="/image/close.png" mode="widthFix" bindtap="close"></image>
+				</view>
+			</view>
+			<view class="aui-list-item aui-list-item-middle aui-padded-l-0" wx:for="{{history}}" wx:key="li">
+				<view class="aui-list-item-inner aui-border-b aui-padded-r-0" bindtap="jup" data-name="{{item.name}}">
+					<text class="aui-font-size-14">{{item.name}}</text>
+					<image src="/image/jt-right1.png" mode="widthFix"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

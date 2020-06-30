@@ -1,0 +1,55 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+
+scroll-view{
+  background-color: #fff !important;
+  white-space:nowrap;
+  width:100%;
+  display: flex;  
+  height:80rpx;
+  line-height: 50rpx;
+}
+scroll-view .swiper-slide{
+  margin-left:30rpx;
+  margin-right:30rpx ;
+}
+scroll-view .swiper-slide:last-child{
+  margin-right:120rpx;
+}
+scroll-view .swiper-slide .txt{color: #999;}
+.flex{display: flex;justify-content:space-between;align-items: center;}
+.search{height: 70rpx;border-radius: 6rpx;}
+.search_box{width: 38%;margin: 0 auto;line-height: 70rpx;}
+.icon image{width: 20rpx;height: 20rpx;}
+.inp{height: 70rpx !important;line-height: 70rpx;text-indent: 30rpx;}
+
+
+/* 导航 */
+scroll-view .nav{color: #666;font-size: 28rpx;position: relative;}
+
+scroll-view .active{color: #ff321b;}
+.line{width: 26rpx;height: 6rpx;border-radius:3rpx;margin: 0 auto;}
+.active .line{background-color: #ff321b;}
+.classfy{justify-content: flex-end;}
+.cl_active{color: #ff321b;}
+.jt image{width: 18rpx;height:18rpx;}
+
+
+
+
+.right{width:80%;}
+.pic{width: 150rpx;height: 150rpx;overflow: hidden;}
+.pic image{width: 100%;height: 100%;object-fit: cover;}
+.item {width: 100%;justify-content: space-between; align-items: flex-start;}
+
+.ad{width: 180rpx;height: 54rpx;line-height:54rpx;}
+.add{width: 59rpx; height: 54rpx;}
+
+.cart image{width: 54rpx;height:54rpx;}
+.cg{height: 54rpx !important;line-height: 54rpx;}
+
+
+/* 无数据 */
+.nodata1{width:80%;height:600rpx;margin:130rpx auto;}
+.nodata1 image{width: 100%;height: 100%;}

@@ -1,0 +1,117 @@
+<view class="">
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="search aui-bg-gray " wx:if="{{search==0}}" bindtap="searchange">
+			<view class="" style="width:100%">
+				<view class="flex search_box aui-text-center">
+					<view class="icon">
+						<image src="/image/sousuo.png"></image>
+					</view>
+					<view class="aui-text-grayer aui-font-size-10">搜索你想要找的商品名称</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex" wx:else>
+			<view class="search aui-bg-gray search1">
+				<view class="aui-padded-l-15 flex">
+					<input class="inp1" type="text" placeholder="搜索你想要找的商品名称" placeholder-style="font-size:20rpx;color:#999" confirm-type="search" bindconfirm='search' bindinput='verification' focus="{{focus}}" value="{{val}}" bindblur="blur"></input>
+				</view>
+			</view>
+			<view class="sousuo" bindtap="search1">
+				<image src="/image/search.png"></image>
+			</view>
+		</view>
+	</view>
+	<!-- <scroll-view scroll-x enable-flex="true" class="aui-padded-t-10">
+		<view class="swiper-slide nav {{prefectureId==0?'active':''}}" bindtap="changeOne" data-id="0">
+			<view class="">全部商品</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide nav {{prefectureId==item.id?'active':''}}" bindtap="changeOne" data-idx="0" wx:for="{{classfyList}}" wx:key="classfyList" data-id="{{item.id}}">
+			<view class="">{{item.name}}</view>
+			<view class="line"></view>
+		</view>
+	</scroll-view> -->
+
+	<view class="aui-bg-whitebrown aui-padded-10 aui-font-size-11 aui-text-gray flex classfy aui-margin-t-10">
+		<view class=" flex">
+			<view class="flex  {{status==0?'cl_active':''}}" bindtap="changeTwo" data-idx="0">
+				<view class="moren aui-padded-r-5">默认</view>
+				<view class="jt">
+					<image src="/image/dw_red.png" wx:if="{{status==0}}"></image>
+					<image src="/image/dw_gray.png" wx:else></image>
+				</view>
+			</view>
+			<view class="flex aui-padded-l-15 aui-padded-r-15 {{status==1||status==2?'cl_active':''}}" bindtap="changeTwo" data-idx="1">
+				<view class="moren aui-padded-r-5">价格</view>
+
+				<view class="jt" wx:if="{{status==1}}">
+					<image src="/image/ud_red1.png"></image>
+				</view>
+				<view class="jt" wx:elif="{{status==2}}">
+					<image src="/image/ud_red2.png"></image>
+				</view>
+				<view class="jt" wx:else>
+					<image src="/image/ud_gray.png"></image>
+				</view>
+			</view>
+			<view class="flex {{status==3||status==4?'cl_active':''}}" bindtap="changeTwo" data-idx="2">
+				<view class="moren aui-padded-r-5">销量</view>
+
+				<view class="jt" wx:if="{{status==3}}">
+					<image src="/image/ud_red1.png"></image>
+				</view>
+				<view class="jt" wx:elif="{{status==4}}">
+					<image src="/image/ud_red2.png"></image>
+				</view>
+				<view class="jt" wx:else>
+					<image src="/image/ud_gray.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 商品列表 -->
+
+	<view class="inner  ">
+		<view class=" aui-padded-l-15  aui-padded-r-15" style="">
+			<block wx:if="{{list.length>0}}">
+				<view class="item flex aui-padded-t-15" wx:for="{{list}}" wx:key="lis" bindtap="detail" data-id="{{item.id}}" data-num="{{item.goodsnum}}">
+					<view class="pic">
+						<image src="{{item.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-margin-l-10 aui-border-b aui-padded-b-15 right">
+						<view >
+							<view class="aui-font-size-14 fw_5 aui-ellipsis-2">{{item.name}}</view>
+							<view class="flex aui-margin-t-10" style="justify-content: flex-start;">
+
+								<view class="aui-text-theme aui-font-size-10  ">
+									<text>现价：</text>
+									<text class="aui-font-size-12">￥{{item.market_price}}</text><text>元/{{item.unit}}</text>
+								</view>
+								<view class="aui-text-grayer aui-font-size-10 aui-padded-l-15">
+									<text>建议零售价：</text>
+									<text class="">{{item.suggest_price}}</text><text>元/{{item.unit}}</text>
+								</view>
+							</view>
+
+						</view>
+						<view class="flex aui-margin-t-15">
+							<view class="ad aui-border flex aui-text-center">
+								<view class="add aui-border-r aui-font-size-20" catchtap="minus" data-id="{{item.id}}" data-index="{{index}}">-</view>
+								<view class="add aui-border-r">{{item.goodsnum}}</view>
+								<view class="add aui-font-size-20" catchtap="add" data-id="{{item.id}}" data-index="{{index}}">+</view>
+							</view>
+							<view class=" aui-margin-l-10 aui-margin-r-10 aui-btn aui-btn-blue-outlined   aui-text-white aui-font-size-14  aui-text-blue cg cgd" catchtap="addCart" data-id="{{item.id}}" data-num="{{item.goodsnum}}">加入采购单</view>
+							<view class=" aui-btn  aui-bg-blue  aui-text-white aui-font-size-14 cg" catchtap="detail" data-id="{{item.id}}" data-num="{{item.goodsnum}}">采购</view>
+						</view>
+					</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="nodata1">
+					<image src="/image/nodata.png"></image>
+				</view>
+			</block>
+
+		</view>
+	</view>
+</view>

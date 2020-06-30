@@ -1,0 +1,20 @@
+<view>
+	<view class="aui-padded-l-15 aui-padded-r-15" wx:if="{{list.length>0}}">
+		<view class="flex  aui-padded-t-15 aui-padded-b-15 item" style="justify-content: space-between;" wx:for="{{list}}" wx:key="lis" data-id="{{item.id}}" bindtap="detail">
+			<view class="left aui-padded-r-10">
+				<view class="aui-ellipsis-2 aui-font-size-14 aui-ellipsis-2">{{item.title}}</view>
+				<view class="aui-font-size-11 aui-text-grayer aui-padded-t-10 ">{{item.create_time}}</view>
+			</view>
+			<view class="right bg-radius">
+				<image src="{{item.thumb}}"></image>
+			</view>
+		</view>
+	</view>
+	<!-- 无数据 -->
+	<view class="aui-padded-l-15 aui-padded-r-15" wx:else>
+		<view class="nodata">
+			<image src="/image/nodata.png"></image>
+		</view>
+
+	</view>
+</view>

@@ -1,0 +1,118 @@
+<view>
+	<view class="bg">
+		<image src="/image/bg.png" mode="aspectFill"></image>
+		<view class="shang"></view>
+		<!-- 已登录 -->
+		<view class="head_box aui-padded-15 flex"  wx:if="{{token!=''}}">
+			<view class="flex" style="justify-content: flex-start;">
+				<view class="head">
+					<image src="{{account.head_portrait}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-fonr-size-17 aui-padded-l-15 aui-text-white">
+					<view>{{account.nick_name}}</view>
+					<view class="aui-font-size-13 aui-margin-t-5">
+						<text class="">{{account.phone}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 未登录 -->
+		<view class="head_box aui-padded-15 flex" bindtap="login" wx:else>
+			<view class="flex" style="justify-content: flex-start;" >
+				<view class="head">
+					<image src="/image/head.png" mode="aspectFill"></image>
+				</view>
+				<view class="aui-fonr-size-17 aui-padded-l-15 aui-text-white">
+					请登录
+				</view>
+			</view>
+			<view class="jtright">
+				<image src="/image/jt-right-white.png"></image>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="aui-padded-15 order ">
+		<view class="aui-bg-white bg-radius aui-padded-15 flex box-shadow">
+			<view class="left ">
+				<image src="/image/cgdingdan.png"></image>
+			</view>
+			<view class="right aui-margin-l-15 aui-border-l flex aui-text-center aui-padded-l-15">
+				<view class="aui-padded-l-15 aui-padded-r-15" bindtap="order" data-index="1">
+					<view class="aui-font-size-25">{{waitCount}}</view>
+					<view class="aui-text-gray aui-font-size-14">待发货</view>
+				</view>
+				<view class="aui-padded-l-15 aui-padded-r-15" bindtap="order" data-index="2">
+					<view class="aui-font-size-25">{{deliveryCount}}</view>
+					<view class="aui-text-gray aui-font-size-14">配送中</view>
+				</view>
+				<view class="aui-padded-l-15 " bindtap="order" data-index="3">
+					<view class="aui-font-size-25">{{finishCount}}</view>
+					<view class="aui-text-gray aui-font-size-14">已完成</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="aui-margin-t-15 aui-padded-l-15 aui-padded-r-15  aui-bg-white cont">
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="address">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/dizhi.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">地址管理 </view>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="fuwu">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/fuwu.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">服务协议 </view>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="jianjie">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/jianjie.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">公司简介 </view>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+		</view>
+		<button open-type="contact" bindcontact="handleContact" class="kf flex  aui-padded-t-15  flex guanli" style="justify-content: space-between;">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/kefu.png"></image>
+			</view>
+			<view class="flex aui-border-b righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">联系客服 </view>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+
+		</button>
+		<view class="   flex  aui-padded-t-15" style="justify-content: space-between;" bindtap="yijian">
+			<view class="kefu aui-padded-b-15">
+				<image src="/image/yijian.png"></image>
+			</view>
+			<view class="flex  righ aui-padded-b-15">
+				<view class="aui-font-size-14 ">意见反馈 </view>
+				<view class="jt_right">
+					<image src="/image/jt-right1.png"></image>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+</view>

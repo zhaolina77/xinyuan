@@ -1,0 +1,82 @@
+<view class="out" style="margin-bottom:140rpx" wx:if="{{list.length>0}}">
+	<view class="aui-padded-15 flex" wx:if="{{list.length>0}}">
+		<view class="aui-pull-left aui-text-gray aui-margin-r-5 aui-font-size-15" bindtap="allCheck">
+			<radio color="#FF321A" name="text" checked="{{tag==1?true:false}}" /> 全选
+		</view>
+		<view style="display: flex;align-items: center;" bindtap="del" data-status="1">
+			<view class="aui-padded-r-10  aui-text-gray sc">
+				<image src="/image/sc.png"></image>
+			</view>
+			<view class="aui-text-gray aui-font-size-14">删除</view>
+		</view>
+	</view>
+
+	<scroll-view scroll-y="{{isScroll}}">
+		<checkbox-group class="checkbox-group" bindchange="radioChange">
+			<view class="aui-list aui-media-list">
+
+				<view wx:key="item" wx:for="{{list}}" wx:key="lis" >
+					<!-- <view data-index='{{index}}' class="order-item " bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx"> -->
+					<view class="order-item ">
+						<view class="aui-list-item aui-pad ded-l-15 aui-padded-t-5 ">
+							<view class="aui-media-list-item-inner  aui-padded-r-15 aui-padded-b-5 aui-border-b">
+								<view class="aui-pull-left aui-margin-r-5 aui-font-size-15" bindtap="selectBox" data-id="{{item.cart_id}}" data-idx="{{index}}">
+									<checkbox color="#FF321A" name="text" checked="{{item.is_select==1?true:false}}" />
+								</view>
+								<view class="aui-list-item-media" bindtap="detail" data-id="{{item.goods_id}}" data-num="{{item.goods_num}}">
+									<view class="shop-pic">
+										<image src="{{item.thumb}}" mode="aspectFill"></image>
+									</view>
+								</view>
+								<view class="aui-list-item-inner aui-padded-r-0" bindtap="detail" data-id="{{item.goods_id}}" data-num="{{item.goods_num}}">
+									<view >
+										<view class="aui-list-item-text">
+											<view class="aui-text-black aui-font-size-14 aui-ellipsis-1">{{item.name}}</view>
+										</view>
+										<view class="aui-list-item-text">
+											<view class="">
+												<view class="aui-list-item-text aui-margin-t-10 aui-font-size-11 aui-text-grayer aui-padded-t-11">{{item.business_name}}</view>
+											</view>
+										</view>
+									</view>
+									<view class="flex">
+										<view class="aui-text-theme aui-font-size-10 aui-margin-t-5">
+											<text>现价：</text>
+											<text class="aui-font-size-12">￥{{item.market_price}}/{{item.unit}}</text>
+										</view>
+
+										<view class="ad aui-border flex aui-text-center">
+											<view class="add aui-border-r aui-font-size-20" catchtap="minus" data-id="{{item.cart_id}}">-</view>
+											<view class="add aui-border-r">{{item.goods_num}}</view>
+											<view class="add aui-font-size-20" catchtap="add" data-id="{{item.cart_id}}">+</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>
+						<view class="remove" bindtap="delItem">删除 </view>
+					</view>
+				</view>
+			</view>
+		</checkbox-group>
+	</scroll-view>
+</view>
+<view wx:else>
+	<view class="nodata1">
+		<image src="/image/nodata.png"></image>
+	</view>
+</view>
+
+
+<view class="footer aui-border-t flex" wx:if="{{list.length>0}}">
+	<view class="cart aui-border-r" bindtap="cart" >
+		<view class="dot aui-text-white aui-font-size-12" wx:if="{{cartNum>0}}">{{cartNum}}</view>
+		<image src="/image/cart-on.png"></image>
+	</view>
+	<view class="caigou aui-text-center" bindtap="addCart">
+		加入采购单
+	</view>
+	<view class="caigou aui-text-center aui-bg-theme aui-text-white" bindtap="tjOrder">
+		提交订单
+	</view>
+</view>

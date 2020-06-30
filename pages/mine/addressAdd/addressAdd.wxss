@@ -1,0 +1,9 @@
+@import '/css/aui.wxss';
+@import '/css/common.wxss';
+@import '/css/global.wxss';
+
+page{background-color: #ffffff !important;}
+.flex{display: flex;justify-content: space-around;}
+/* .jt_right{width:30rpx;height: 35rpx;} */
+.jt_right image{width: 26rpx;height: 26rpx;}
+.pick{width: 90%;}

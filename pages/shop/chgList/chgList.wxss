@@ -1,0 +1,88 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+
+.sc image{width: 26rpx;height: 26rpx;}
+.aui-media-list-item-inner{
+    align-items: center;
+}
+.aui-list .aui-list-item-media{
+    width: auto !important;
+}
+.shop-pic{
+    width:150rpx;
+    height:150rpx;
+    overflow:hidden
+}
+.shop-pic image{
+    width: 100%;
+    height: 100%;
+}
+.old{
+    text-decoration: line-through;
+}
+.aui-list:first-child .mui-table-view:last-child .mui-slider-handle {
+    border-bottom: none !important;
+}
+.aui-media-list .aui-list-item-inner{
+    min-width: 0;
+}
+.shuliang{
+    display: flex;
+}
+.num{
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+}
+.num input{ 
+    width:70rpx !important;
+    height: 1rem !important;
+    line-height: 60rpx;
+    margin-bottom: 0;
+}
+.order-item {
+  position: relative;
+}
+.order-item:last-child .aui-list-item .aui-media-list-item-inner{border: none !important;}
+.remove{  
+  width: 160rpx;  
+  height: 100%;  
+  background-color: #F36666; 
+  color: white; 
+  position: absolute;  
+  top: 0;  
+  right: -160rpx;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+} 
+.flex{display: flex;justify-content:space-between;align-items: center;}
+.ad{width: 180rpx;height: 54rpx;line-height:54rpx;}
+.add{width: 59rpx; height: 54rpx;}
+.footer{
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer .aui-btn-theme{
+    width:240rpx !important;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+/* 底部 */
+
+.footer{width: 100%;height: 100rpx;background-color: white;position: fixed;bottom: 0;z-index: 999;}
+.aui-badge{min-width: 0;}
+.cart{width: 20%;height:100rpx;text-align: center;position: relative;}
+.cart image{width: 58rpx;height: 58rpx;margin: 21rpx auto;}
+.caigou{width: 40%;line-height: 100rpx;}
+.dot{width: 32rpx;height: 32rpx;border-radius: 50%;background-color: #FF321A;position: absolute;right:26rpx;top: 16rpx;}
+
+/* 无数据 */
+.nodata1{width:80%;height:600rpx;margin:0 auto;margin-top: 160rpx;}
+.nodata1 image{width: 100%;height: 100%;}

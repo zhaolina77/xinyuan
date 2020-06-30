@@ -1,0 +1,81 @@
+<view class="out" style="margin-bottom:140rpx">
+	<view class="aui-padded-15 flex" wx:if="{{list.length>0}}">
+		<view class="aui-pull-left aui-text-gray aui-margin-r-5 aui-font-size-15" bindtap="allCheck">
+			<radio color="#FF321A" name="text" checked="{{tag==1?true:false}}" /> 全选
+		</view>
+		<view style="display: flex;align-items: center;" bindtap="del" data-status="1">
+			<view class="aui-padded-r-10  aui-text-gray sc">
+				<image src="/image/sc.png"></image>
+			</view>
+			<view class="aui-text-gray aui-font-size-14">删除</view>
+		</view>
+	</view>
+	<scroll-view scroll-y="{{isScroll}}">
+		<checkbox-group class="checkbox-group" bindchange="radioChange">
+			<view class="aui-list aui-media-list">
+				<block wx:if="{{list.length>0}}">
+					<view wx:key="item" wx:for="{{list}}" wx:key="lis" bindtap="detail" data-id="{{item.goods_id}}">
+						<view data-index='{{index}}' class="order-item ">
+							<view class="aui-list-item aui-pad ded-l-15 aui-padded-t-5 ">
+								<view class="aui-media-list-item-inner  aui-padded-r-15 aui-padded-b-5 aui-border-b">
+									<view class="aui-pull-left aui-margin-r-5 aui-font-size-15" catchtap="selectBox" data-id="{{item.cart_id}}" data-idx="{{index}}">
+										<checkbox checked="{{item.is_select==1?true:false}}"></checkbox>
+										<!-- <radio color="#FF321A"  name="text" checked="check" data-id="{{item.cart_id}}"/> -->
+									</view>
+									<view class="aui-list-item-media" >
+										<view class="shop-pic">
+											<image src="{{item.thumb}}" mode="aspectFill"></image>
+										</view>
+									</view>
+									<view class="aui-list-item-inner aui-padded-r-0 aui-border-b">
+										<view class="aui-list-item-text" >
+											<view class="aui-text-black aui-font-size-14 aui-ellipsis-1">{{item.name}}</view>
+										</view>
+										<view class="aui-list-item-text" >
+											<view class="">
+												<view class="aui-list-item-text aui-margin-t-10 aui-font-size-11 aui-text-grayer aui-padded-t-11">{{item.business_name}}</view>
+											</view>
+										</view>
+										<view class="flex">
+											<view class="aui-text-theme aui-font-size-10 aui-margin-t-5">
+												<text>现价：</text>
+												<text class="aui-font-size-12">￥{{item.market_price}}</text><text>元/{{item.unit}}</text>
+												<text class="delline aui-text-grayer aui-padded-l-15">￥{{item.original_price}}</text>
+											</view>
+											<view class="ad aui-border flex aui-text-center">
+												<view class="add aui-border-r" catchtap="minus" data-id="{{item.cart_id}}">-</view>
+												<view class="add aui-border-r">{{item.goods_num}}</view>
+												<view class="add" catchtap="add" data-id="{{item.cart_id}}">+</view>
+											</view>
+										</view>
+									</view>
+								</view>
+							</view>
+							<view class="remove" bindtap="del" data-id="{{item.id}}" data-status="2">删除</view>
+						</view>
+					</view>
+				</block>
+
+				<block wx:else>
+					<view class="nodata1">
+						<image src="/image/nodata.png"></image>
+					</view>
+				</block>
+			</view>
+		</checkbox-group>
+	</scroll-view>
+</view>
+<view class="footer aui-border-t flex" wx:if="{{list.length>0}}">
+	<view class="cart aui-padded-l-15 flex">
+		<view class=" aui-text-gray aui-font-size-15" bindtap="allCheck">
+			<radio color="#FF321A" name="text" checked="{{tag==1?true:false}}" /> 全选
+		</view>
+		<view class="aui-font-size-14 flex aui-padded-r-15">
+			<view class=" aui-text-grayer">合计：</view>
+			<view class=" aui-text-theme">￥{{totalPrice}}</view>
+		</view>
+	</view>
+	<view class="caigou aui-text-center aui-bg-theme aui-text-white" bindtap="tjOrder">
+		提交订单
+	</view>
+</view>

@@ -1,0 +1,107 @@
+/* 背景颜色 */
+/* page{background-color: #F6F6F6 !important;color: #333333;} */
+page{color: #222222 ;}
+
+/*背景圆角*/
+.bg-radius{border-radius: 10rpx;overflow: hidden;}
+
+/* 字体加粗 */
+.fw-bold{font-weight: bold;}
+/* banner */
+.banner{
+    height:280rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    border-radius: 15rpx;
+    overflow: hidden;
+}
+.banner swiper{
+    height:280rpx;
+    position: relative;
+    
+}
+.banner swiper-item image{
+    width: 100%;
+    height: 100%;
+}
+
+.aui-margin-b-4{margin-bottom: 4rpx;}
+.btn_box{width: 100%; position: fixed;bottom: 0;left: 0;}
+.btn_box .btn{width: 100%;height: 86rpx;background-color: #ff321b;border-radius:10rpx;line-height: 86rpx;text-align: center;color: #ffffff;font-size: 30rpx;font-weight: 500;}
+
+
+/* banner */
+.banner{
+    height:260rpx;
+    position: relative;
+    background-color: #F5F6FA;
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.banner swiper{
+    height:260rpx;
+    position: relative;
+}
+.banner swiper-item image{
+    width: 100%;
+    height: 100%
+}
+
+
+.box-shadow{box-shadow: 0 0 10rpx 4rpx rgba(236, 236, 236, 0.5);}
+
+
+.aui-padded-t-20 {
+    padding-top: 40rpx !important;
+}
+.aui-padded-b-20 {
+    padding-bottom: 40rpx !important;
+}
+.aui-margin-t-20 {
+    margin-top: 40rpx !important;
+}
+
+.inp1{width:100%;height: 70rpx !important;line-height: 70rpx;}
+
+
+checkbox .wx-checkbox-input {
+	width: 34rpx;
+	height: 34rpx;
+	border-radius: 50%;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #ff321b;
+  border-color:#ff321b;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 20rpx;
+  height: 20rpx;  
+  line-height: 20rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+input[type="text"]{
+    font-size: 30rpx !important;
+}
+/* input[type="password"] {
+    font-size: 10rpx !important;
+} */
+
+/* 商城右边样式 */
+.sp_right{
+    width: 67%;
+}
+
+/* 订单 */
+.big_box{padding-bottom:120rpx !important;}
+.orderdetail_right{width:80%;}
+
+.search1{width: 92%;}
+.sousuo image{width: 30rpx;height: 30rpx;}

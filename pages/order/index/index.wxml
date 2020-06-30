@@ -1,0 +1,82 @@
+<view class="aui-tab  mine-bar" id="tab">
+	<scroll-view scroll-x enable-flex="true">
+		<view class="swiper-slide {{status==-1?'on':''}} " bindtap="change" data-idx="-1">
+			<view class="aui-font-size-15 txt ">全部</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide {{status==1?'on':''}}" bindtap="change" data-idx="1">
+			<view class="aui-font-size-15 txt">待发货</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide {{status==2?'on':''}}" bindtap="change" data-idx="2">
+			<view class="aui-font-size-15 txt">配送中</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide {{status==3?'on':''}}" bindtap="change" data-idx="3">
+			<view class="aui-font-size-15 txt">已完成</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide {{status==4?'on':''}}" bindtap="change" data-idx="4">
+			<view class="aui-font-size-15 txt">已取消</view>
+			<view class="line"></view>
+		</view>
+		<view class="swiper-slide {{status==5?'on':''}}" bindtap="change" data-idx="5">
+			<view class="aui-font-size-15 txt">已关闭</view>
+			<view class="line"></view>
+		</view>
+	</scroll-view>
+</view>
+
+<view class="aui-padded-l-15 aui-padded-r-15 " style="margin-top:100rpx">
+	<block wx:if="{{list.length>0}}">
+		<view class="bg-radius box-shadow aui-padded-15 aui-margin-t-15 aui-margin-b-15" wx:for="{{list}}" wx:key="lis">
+			<view bindtap="detail" data-id="{{item.id}}" data-status="{{item.status}}"> 
+				<view class="aui-border-b">
+					<view class="flex">
+						<view class="aui-font-size-15 aui-padded-b-5 ">{{item.shopname}}</view>
+						<view class="aui-font-size-14 aui-text-grayer">{{item.pay_name}}</view>
+					</view>
+					<view class="aui-font-size-13 aui-margin-t-5 aui-padded-b-10 ">联系人：{{item.linkman}} —{{item.shopphone}}</view>
+				</view>
+				<view class="aui-padded-b-15 aui-border-b">
+					<view class="flex" style="justify-content: flex-start;align-items:flex-end;">
+						<view class="aui-padded-t-10  item ">
+							<view class="pic" wx:for="{{item.goods_order_list}}" wx:for-item="voo" wx:key='v'>
+								<image src="{{voo.thumb}}" mode="aspectFill"></image>
+								<view class="shang aui-text-white aui-font-size-10 aui-text-center ">共{{voo.goods_num}}件</view>
+							</view>
+						</view>
+						<view class="aui-text-grayer aui-font-size-13 aui-padded-l-15">…共{{item.goods_num}}种商品</view>
+					</view>
+				</view>
+				<view class="heji flex aui-padded-t-10  aui-padded-t-10">
+					<text class="aui-text-gray aui-font-size-13 aui-padded-r-15">采购数量：{{item.goods_num}}</text>
+					<text class="aui-text-theme aui-font-size-15">合计：￥{{item.total_price}}</text>
+				</view>
+			</view>
+			<!-- 待发货 -->
+			<view class=" aui-padded-t-15  flex " style="justify-content: flex-end;">
+				<view class="aui-font-size-14 qx aui-text-center " wx:if="{{item.status==1}}" bindtap="qxOrder" data-id="{{item.id}}">取消订单</view>
+				<!-- 配送中 -->
+				<view class="aui-font-size-14 qx aui-text-center " wx:elif="{{item.status==2}}" bindtap="qrOrder" data-id="{{item.id}}">确认收货</view>
+				<!-- 已完成 已取消 已关闭 -->
+				<view class="aui-font-size-14 qx aui-text-center " wx:else bindtap="delete" data-id="{{item.id}}">删除订单</view>
+			</view>
+		</view>
+	</block>
+	<block wx:else>
+		<view class="nodata1">
+			<image src="/image/nodata.png"></image>
+		</view>
+
+
+	</block>
+
+
+
+
+
+
+
+
+</view>

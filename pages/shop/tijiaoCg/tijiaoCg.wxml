@@ -1,0 +1,16 @@
+<view class="aui-content" style="padding-top:200rpx;">
+	<view class="aui-padded-15">
+		<view class="pic">
+			<image src="/image/txcg.png" mode="aspectFill"></image>
+		</view>
+		<view class="aui-font-size-17 fw5 aui-text-center aui-padded-t-15">
+			您的订单已提交成功
+		</view>
+	</view>
+	
+	<view class="aui-text-center">
+		<view class="aui-btn aui-btn-theme tj_btn  aui-text-white " bindtap="back">我知道了</view>
+	</view>
+
+
+</view>

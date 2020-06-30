@@ -1,0 +1,70 @@
+<view class="aui-padded-l-15 aui-padded-r-15 big_box">
+
+
+	<view class=" aui-padded-b-15 aui-padded-t-15">
+		<text class="aui-font-size-20 fw_5">{{order.pay_name}}</text>
+		<text class="aui-padded-l-10 aui-font-size-12 aui-text-grayer">希望下次为您服务 </text>
+
+	</view>
+
+	<view class=" bg-radius aui-list-item box-shadow aui-padded-15 flex">
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-inner   aui-padded-b-15 aui-padded-b-0">
+				<view class="aui-list-item-text aui-font-size-13 aui-text-grayer aui-padded-t-5 aui-padded-b-12">商品配送地址</view>
+				<view class="aui-list-item-text  aui-text-blacker aui-padded-t-5 aui-padded-b-5">
+					<text class="aui-font-size-17 fw_5">{{order.name}}</text>
+					<text class="aui-font-size-15 aui-padded-l-10">{{order.mobile}}</text>
+				</view>
+				<view class="aui-margin-t-5 aui-list-item-text aui-text-black aui-font-size-14">{{order.address_info}}</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="bg-radius box-shadow aui-padded-10 aui-margin-t-15">
+		<view class="aui-border-b">
+			<view class="aui-font-size-15 aui-padded-b-5 ">{{order.business_name}}</view>
+			<!-- <view class="aui-font-size-13 aui-padded-b-10 aui-margin-t-5">联系人：李洪亮 —15123746578</view> -->
+		</view>
+
+		<view class="aui-padded-b-15 aui-border-b">
+			<view class="aui-padded-t-10 flex item " wx:for="{{list}}">
+				<view class="pic">
+					<image src="{{item.thumb}}" mode="aspectFill"></image>
+				</view>
+				<view class="aui-padded-l-10 orderdetail_right">
+					<view class="aui-font-size-14">{{item.goods_name}}</view>
+					<view class="aui-text-grayer aui-font-size-13 aui-margin-t-10">
+						<text>￥{{item.goods_price}}/{{item.unit}}</text>
+						<text class="aui-margin-l-15">x{{item.goods_num}}</text>
+					</view>
+				</view>
+			</view>
+			
+		</view>
+		<view class="heji flex aui-padded-t-10  aui-padded-t-10">
+			<text class="aui-text-gray aui-font-size-13 aui-padded-r-15">采购数量：{{order.goods_num}}</text>
+			<text class="aui-text-theme aui-font-size-15">合计：￥{{order.total_price}}</text>
+		</view>
+	</view>
+	<view class="bg-radius box-shadow aui-padded-15 aui-margin-t-15">
+		<view class="aui-font-size-13 aui-text-grayer ">订单信息</view>
+		<view class="aui-font-size-13  aui-margin-t-15">
+			<text>订单编号：</text>
+			<text>{{order.order_sn}}</text>
+		</view>
+		<view class="aui-font-size-13 aui-margin-t-15 ">
+			<text>下单时间：</text>
+			<text>{{order.create_time}}</text>
+		</view>
+    <view class="aui-font-size-13 aui-margin-t-15 ">
+			<text>取消时间：</text>
+			<text>{{order.cancel_time}}</text>
+		</view>
+	</view>
+
+</view>
+
+<view class="footer flex aui-padded-r-15">
+	<view class="aui-font-size-14 qx aui-text-center" bindtap="delete">删除订单</view>
+</view>

@@ -1,0 +1,51 @@
+<view class="">
+		<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="search aui-bg-gray ">
+			<view class="" style="width:100%" bindtap="search">
+				<view class="flex search_box ">
+					<view class="icon">
+						<image src="/image/sousuo.png"></image>
+					</view>
+					<view class="aui-text-grayer aui-font-size-10">搜索你想要找的商品名称</view>
+				</view>
+			</view>
+			<view class="aui-padded-l-15">
+			</view>
+		</view>
+	</view>
+	<!-- 商品列表 -->
+	<view class="inner aui-margin-t-15">
+		<view class="left" style="">
+			<view class="left_txt aui-text-center {{classifyId==item.id?'left_active':''}}" wx:for="{{categoryList}}" wx:key="categoryList" bindtap="changeOne" data-id="{{item.id}}">{{item.class_name}}</view>
+		</view>
+		<view class="right  aui-row aui-padded-l-15 aui-padded-r-15">
+			<block wx:if="{{classfyList.length>0}}">
+				<view class="item aui-col-xs-4 box-shadow bg-radius" wx:for="{{classfyList}}" wx:key="class" bindtap="shopDetail" data-id="{{item.id}}">
+					<view class="classfy_pic">
+						<image src="{{item.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="aui-margin-5 aui-text-center aui-font-size-13 aui-ellipsis-1">{{item.name}}</view>
+				</view>
+			</block>
+			<block wx:else>
+				<view class="nodata">
+					<image src="/image/nodata.png"></image>
+				</view>
+			</block>
+
+
+		</view>
+
+
+
+
+		
+
+	</view>
+
+
+
+
+	<!-- 二级分类列表 -->
+
+</view>

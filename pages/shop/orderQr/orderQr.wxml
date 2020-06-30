@@ -1,0 +1,99 @@
+<view class="aui-padded-15 " style="margin-bottom:140rpx">
+	<!-- 无地址 -->
+	<view class="bg-radius box-shadow aui-padded-15 " bindtap="addadress" wx:if="{{address==null}}">
+		<view class="aui-text-grayer aui-font-size-14 aui-margin-t-10">您还没有商品配送地址哦！</view>
+		<view class="aui-margin-t-15">
+			<view class="aui-btn aui-btn-blue-outlined aui-margin-t-10 aui-margin-b-5">添加配送地址</view>
+		</view>
+	</view>
+	<!-- 有地址 -->
+	<view class=" bg-radius aui-list-item box-shadow aui-padded-15 flex " bindtap="addadress" wx:else>
+		<view class="aui-media-list-item-inner">
+			<view class="aui-list-item-inner   aui-padded-b-15 aui-padded-b-0">
+				<view class="aui-list-item-text aui-font-size-13 aui-text-grayer aui-padded-t-5 aui-padded-b-12">商品邮寄地址(必填)</view>
+				<view class="aui-list-item-text  aui-text-blacker aui-padded-t-5 aui-padded-b-5">
+					<text class="aui-font-size-17 fw_5">{{name}}</text>
+					<text class="aui-font-size-15 aui-padded-l-10">{{mobile}}</text>
+				</view>
+				<view class="aui-margin-t-5 aui-list-item-text aui-text-black aui-font-size-14">{{full_address}}{{address_info}}</view>
+			</view>
+		</view>
+		<view class="jt_right">
+			<image src="/image/jt-right1.png"></image>
+		</view>
+	</view>
+
+	<!-- 商品详情提交订单 -->
+	<view wx:if="{{type==3}}">
+		<view class="bg-radius box-shadow aui-padded-10 aui-margin-t-15">
+			<view class="aui-font-size-15 aui-padded-b-10 aui-border-b">{{goods.supplier_name}}</view>
+			<view class="aui-padded-b-15 aui-border-b">
+				<view class="aui-padded-t-10 flex item ">
+					<view class="pic">
+						<image src="{{goods.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="pic_right">
+						<view class="aui-font-size-14 aui-ellipsis-2">{{goods.name}}</view>
+						<view class="aui-text-grayer aui-font-size-13 aui-margin-t-10">
+							<text>￥{{goods.market_price}}/{{goods.unit}}</text>
+							<text class="aui-margin-l-15">x {{goods.goods_num}}</text>
+						</view>
+					</view>
+				</view>
+
+			</view>
+			<view class="heji flex aui-padded-t-10  aui-padded-t-10">
+				<text class="aui-text-gray aui-font-size-13 aui-padded-r-15">采购数量：{{goods.goods_num}}</text>
+				<text class="aui-text-theme aui-font-size-15">合计：￥{{goods.paid_money}}</text>
+			</view>
+		</view>
+
+	</view>
+	<!-- 采购单提交订单    常购清单提交到确认订单页面-->
+	<view wx:else>
+		<view class="bg-radius box-shadow aui-padded-10 aui-margin-t-15" wx:for="{{cartPist}}" wx:key="pis">
+			<view class="aui-font-size-15 aui-padded-b-10 aui-border-b">{{item.supplier.business_name}}</view>
+			<view class="aui-padded-b-15 aui-border-b">
+				<view class="aui-padded-t-10 flex item " wx:for='{{item.goods_list}}' wx:for-item="voo" wx:key="list">
+					<view class="pic">
+						<image src="{{voo.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="pic_right">
+						<view class="aui-font-size-14 aui-ellipsis-2">{{voo.name}}</view>
+						<view class="aui-text-grayer aui-font-size-13 aui-margin-t-10">
+							<text>￥{{voo.market_price}}/{{voo.unit}}</text>
+							<text class="aui-margin-l-15">x {{voo.goods_num}}</text>
+						</view>
+					</view>
+				</view>
+
+			</view>
+			<view class="heji flex aui-padded-t-10  aui-padded-t-10">
+				<text class="aui-text-gray aui-font-size-13 aui-padded-r-15">采购数量：{{item.supplier.supplier_goods_num}}</text>
+				<text class="aui-text-theme aui-font-size-15">合计：￥{{item.supplier.supplier_total_price}}</text>
+			</view>
+		</view>
+
+
+	</view>
+
+
+</view>
+
+
+
+<view class="footer flex">
+	<view class="cart aui-padded-l-15 flex">
+		<view class="aui-font-size-14 flex aui-padded-r-15 aui-text-gray">
+			<view class=" ">采购数量：</view>
+			<view class="">{{goods_num}}</view>
+		</view>
+		<view class="aui-font-size-14 flex aui-padded-r-15">
+			<view class=" aui-text-gray">需支付：</view>
+			<view class=" aui-text-theme aui-font-size-18">￥{{paid_money}}</view>
+		</view>
+	</view>
+	<view class="caigou aui-text-center aui-bg-theme aui-text-white" bindtap="order">
+		立即下单
+	</view>
+</view>

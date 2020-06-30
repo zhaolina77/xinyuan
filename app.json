@@ -1,0 +1,75 @@
+{
+  "pages":[
+    "pages/index/index/index",
+    "pages/index/zhuanquList/zhuanquList",
+    "pages/index/gonggaoList/gonggaoList",
+    "pages/search/searchJl/searchJl",
+    "pages/shop/shangjia/shangjia",
+    "pages/index/gonggao/gonggao",
+    "pages/shop/tijiaoCg/tijiaoCg",
+    "pages/shop/shop/shop",
+    "pages/index/tejiaDetail/tejiaDetail",
+    "pages/index/tejia/tejia",
+    "pages/order/index/index",
+    "pages/order/guanbi/guanbi",
+    "pages/order/quxiao/quxiao",
+    "pages/order/wancheng/wancheng",
+    "pages/order/peisong/peisong",
+    "pages/order/daifahuo/daifahuo",
+    "pages/mine/index/index",
+    "pages/mine/yijian/yijian",
+    "pages/mine/jianjie/jianjie",
+    "pages/mine/xieyi/xieyi",
+    "pages/mine/addressBj/addressBj",
+    "pages/mine/addressAdd/addressAdd",
+    "pages/mine/address/address",
+    "pages/shop/orderQr/orderQr",
+    "pages/shop/fenleiDetail/fenleiDetail",
+    "pages/shop/cart/cart",
+    "pages/shop/chgList/chgList",
+    "pages/shop/shoDetail/shoDetail",
+    "pages/shop/index/index",
+    "pages/login/userinfo/userinfo",
+    "pages/login/login/login",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF321A",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+        {
+            "pagePath":"pages/index/index/index",
+            "text": "首页",
+            "iconPath": "/image/index-off.png",
+            "selectedIconPath": "/image/index-on.png"
+        },
+        {
+            "pagePath": "pages/shop/index/index",
+            "text": "商城",
+            "iconPath": "/image/shop-off.png",
+            "selectedIconPath": "/image/shop-on.png"
+        },
+        {
+            "pagePath": "pages/shop/cart/cart",
+            "text": "采购单",
+            "iconPath": "/image/cart-off.png",
+            "selectedIconPath": "/image/cart-on.png"
+        },
+        {
+            "pagePath": "pages/mine/index/index",
+            "text": "我",
+            "iconPath": "/image/mine-off.png",
+            "selectedIconPath": "/image/mine-on.png"
+        }
+    ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

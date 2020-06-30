@@ -1,0 +1,64 @@
+<view class="">
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="search aui-bg-gray " wx:if="{{search==0}}" bindtap="searchange">
+			<view class="" style="width:100%">
+				<view class="flex search_box aui-text-center">
+					<view class="icon">
+						<image src="/image/sousuo.png"></image>
+					</view>
+					<view class="aui-text-grayer aui-font-size-10">搜索你想要找的商品名称</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex" wx:else>
+			<view class="search aui-bg-gray search1">
+				<view class="aui-padded-l-15 flex">
+					<input class="inp1" type="text" placeholder="搜索你想要找的商品名称" placeholder-style="font-size:20rpx;color:#999" confirm-type="search" bindconfirm='search' bindinput='verification' focus="{{focus}}" value="{{val}}" ></input>
+				</view>
+			</view>
+			<view class="sousuo" bindtap="search1">
+				<image src="/image/search.png"></image>
+			</view>
+		</view>
+	</view>
+
+	<view class="aui-padded-15">
+		<block wx:if="{{supplierList.length>0}}">
+			<view class="" wx:for="{{supplierList}}" wx:key="supplierList" bindtap="detail" data-id="{{item.id}}">
+				<view class="flex shangmao  aui-padded-b-15 " style="align-items:flex-start">
+					<view class="head">
+						<image src="{{item.thumb}}" mode="aspectFill"></image>
+					</view>
+					<view class="rig aui-padded-l-10 aui-border-b aui-padded-b-15">
+						<view class=" flex">
+							<view class="">
+								<view class="aui-font-size-15">{{item.name}}</view>
+								<view class="aui-text-blue aui-font-size-12 aui-margin-t-5">{{item.label}}</view>
+							</view>
+							<view class="rig_ico">
+								<image src="/image/jt-right1.png"></image>
+							</view>
+						</view>
+						<view class=" shangmao aui-padded-t-15   aui-text-grayer aui-font-size-12 ">
+							{{item.content}}
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+
+		<block wx:else>
+			<view class="nodata1">
+				<image src="/image/nodata.png"></image>
+			</view>
+		</block>
+
+
+
+
+
+
+	</view>
+
+
+</view>

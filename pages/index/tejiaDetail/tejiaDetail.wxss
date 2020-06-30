@@ -1,0 +1,49 @@
+@import'/css/aui.wxss';
+@import'/css/common.wxss';
+@import'/css/global.wxss';
+.flex{display: flex;justify-content:space-between;align-items: center;}
+.search{height: 70rpx;border-radius: 6rpx;}
+.search_box{width: 38%;margin: 0 auto;line-height: 70rpx;}
+.icon image{width: 20rpx;height: 20rpx;}
+.inp{height: 70rpx !important;line-height: 70rpx;text-indent: 30rpx;}
+.head{width: 80rpx;height:80rpx;border-radius: 50%;overflow: hidden;}
+.head image{width: 100%;height:100%;}
+.rig{width: 90%;}
+.rig_ico{width: 24rpx;height: 24rpx;}
+.rig_ico image{width: 100%;height: 100%;}
+.dizhi{justify-content: flex-start;}
+/* .icon1{width: 26rpx;height: 26rpx;} */
+.icon1 image{width: 26rpx;height: 26rpx;}
+.dianhua{height: 60rpx !important;}
+
+
+
+.left{background-color: #F6F6F6;width:20%;position: absolute;left:0;height: 100%;overflow-y: scroll;padding-bottom: 120rpx;}
+.left_txt{width: 100%;height: 100rpx;line-height: 100rpx;font-size: 28rpx;}
+.left_active{border-left: 7rpx solid #FF321A;background-color: #fff;font-weight: 500;color:#FF321A;}
+
+
+.right{width:80%;position: absolute;left: 20%;height: 100%;overflow-y: scroll;padding-bottom: 120rpx;}
+.pic{width: 150rpx;height: 150rpx;overflow: hidden;}
+.pic image{width: 100%;height: 100%;object-fit: cover;}
+.right .item {justify-content: flex-start;align-items: flex-start;}
+
+.ad{width: 180rpx;height: 54rpx;line-height:54rpx;}
+.add{width: 59rpx; height: 54rpx;}
+
+.cart image{width: 54rpx;height:54rpx;}
+.cg{height: 54rpx !important;line-height: 54rpx;}
+/* .sp_right{width: 60%;} */
+
+
+
+/* 修改 */
+.aui-col-xs-4{width: 31%;margin-right: 2%;margin-bottom:20rpx;}
+.aui-col-xs-4:last-child{margin-right: 0;}
+.classfy_pic{width: 100%;height:130rpx;}
+.classfy_pic image{width: 100%;height: 100%;}
+
+
+/* 无数据 */
+.nodata{width:80%;height: 500rpx;margin: 240rpx auto;}
+.nodata image{width: 100%;height: 100%;}

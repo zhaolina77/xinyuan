@@ -1,0 +1,12 @@
+<view class='img'>
+	<view style="margin-top:50%;">
+		<view class="aui-margin-t-15">
+			<view class="aui-font-size-18 aui-margin-t-15">即将登陆，请确认是本人操作</view>
+			<view class="aui-font-size-16 aui-margin-t-15 aui-text-center" style='color:#999;position:relative;'> 使用你的账号登陆该应用</view>
+		</view>
+	</view>
+</view>
+<view class="aui-padded-15">
+	<!-- <button class="aui-btn aui-btn-block" open-type="getUserInfo" type='primary' bindgetuserinfo="bindGetUserInfo">确认登录</button> -->
+	<button class='aui-btn aui-btn-block aui-btn-theme'  plain="true" type="primary" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取手机号</button>
+</view>

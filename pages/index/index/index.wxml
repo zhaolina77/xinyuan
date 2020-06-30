@@ -1,0 +1,95 @@
+<view class="">
+	<view class="aui-padded-l-15 aui-padded-r-15">
+		<view class="search aui-bg-gray ">
+			<view class="" style="width:100%" bindtap="search">
+				<view class="flex search_box ">
+					<view class="icon">
+						<image src="/image/sousuo.png"></image>
+					</view>
+					<view class="aui-text-grayer aui-font-size-10">搜索你想要找的商品名称</view>
+				</view>
+			</view>
+			<view class="aui-padded-l-15">
+			</view>
+		</view>
+	</view>
+	<view class="aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+		<view class="banner">
+			<swiper interval="2000" circular indicator-dots duration="500" autoplay indicator-color="#E8E8E8" indicator-active-color="#FF321A ">
+				<swiper-item wx:for="{{bannerList}}" wx:key="lis">
+					<image src="{{item.thumb}}" mode="aspectFill" bindtap="bannerJump" data-id="{{item.url}}"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+	<!-- 通知、公告 -->
+	<view class="aui-padded-15 aui-padded-t-5 aui-padded-b-5" wx:if="{{activityList.length>0}}">
+		<view class="bg-radius flex aui-bg-white">
+			<view class="zx_pic">
+			<image src="/image/gonggao.png"></image>
+			</view>
+			<view class="aui-font-size-13 aui-ellipsis-1 zx_txt aui-text-theme">
+				<swiper class="zixun_banner" interval="2000" autoplay="true" circular duration="500" vertical='true'>
+					<swiper-item wx:for="{{activityList}}" wx:key="act" data-id="{{item.id}}" bindtap="zx_detail">
+						<view>{{item.title}}</view>
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
+	</view>
+
+	<!-- 专区 -->
+	<view class="fl flex aui-margin-t-15 aui-padded-l-15 aui-padded-r-15">
+		<view class="fl_box aui-text-center aui-text-gray aui-font-size-14" wx:for="{{prList}}" wx:key="categoryList" bindtap="fenlei" data-id="{{item.id}}" data-index="{{index}}" data-name="{{item.name}}">
+			<view class="fl_pic">
+				<image src="{{item.thumb}}"></image>
+			</view>
+			<view class="aui-margin-t-5">{{item.name}}</view>
+		</view>
+		<view class="fl_box aui-text-center aui-text-gray aui-font-size-14" bindtap="fenlei" data-index="2">
+			<view class="fl_pic">
+				<image src="/image/fl3.png"></image>
+			</view>
+			<view class="aui-margin-t-5">常购清单</view>
+		</view>
+	</view>
+	<!-- 分类 -->
+	<view class=" aui-margin-t-15 aui-padded-l-15 aui-padded-r-15 content">
+		<view class="aui-col-xs-3 item" wx:for="{{categoryList}}" wx:key='prList' bindtap="zhuanqu" data-id="{{item.id}}" data-name="{{item.name}}">
+			<view class="pic">
+				<image src="/image/bg1.png" mode="aspectFill" wx:if="{{item.thumb==' '||item.thumb==null}}"></image>
+				<image src="{{item.thumb}}" mode="aspectFill" wx:else></image>
+			</view>
+			<view class="shang"></view>
+			<view class="txt aui-text-white aui-text-center aui-font-size-14">{{item.name}}</view>
+		</view>
+	</view>
+	<view class="aui-bg-gray aui-padded-10 aui-text-center fw_5 pt aui-margin-t-10 aui-font-size-14">平台供应商</view>
+	<view class="aui-padded-15">
+		<view class="supplierList" wx:for="{{supplierList}}" wx:key="supplierList">
+			<view class="flex shangmao  aui-padded-b-15 " style="align-items:flex-start">
+				<view class="head">
+					<image src="/image/head.png" mode="aspectFill" wx:if="{{item.thumb==null||item.thumb==''}}"></image>
+					<image src="{{item.thumb}}" mode="aspectFill"  wx:else></image>
+				</view>
+				<view class="rig aui-padded-l-10 aui-border-b aui-padded-b-15">
+					<view class="flex aui-padded-b-15">
+						<view class="middle" bindtap="detail" data-id="{{item.id}}">
+							<view class="aui-font-size-15">{{item.name}}</view>
+							<view class="aui-text-blue aui-font-size-12 aui-margin-t-5">{{item.label}}</view>
+						</view>
+						<view class="rig_ico" bindtap="listShow" wx:if="{{item.shows==1}}" data-idx="{{item.idx}}">
+							<image src="/image/jt-top1.png"></image>
+						</view>
+						<view class="rig_ico " bindtap="listShow" wx:else data-idx="{{item.idx}}">
+							<image src="/image/jt-bottom1.png"></image>
+						</view>
+					</view>
+					<view class=" shangmao aui-padded-t-5  aui-text-grayer aui-font-size-12" wx:if="{{item.shows==1}}" bindtap="detail" data-id="{{item.id}}">
+						{{item.content}}
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
